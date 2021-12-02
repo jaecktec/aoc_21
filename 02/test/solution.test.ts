@@ -9,14 +9,14 @@ test('part 1 - computes sample', async () => {
   const sampleInput = await readFile(resolve(__dirname, '../resources', 'sample.txt'), 'utf8');
   const result = solve1(sampleInput);
 
-  assert.equal(result, 7);
+  assert.equal(result, 150);
 });
 
 test('part 2 - computes sample', async () => {
   const sampleInput = await readFile(resolve(__dirname, '../resources', 'sample.txt'), 'utf8');
   const result = solve2(sampleInput);
 
-  assert.equal(result, 5);
+  assert.equal(result, 900);
 });
 
 
