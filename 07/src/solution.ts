@@ -2,10 +2,6 @@ const parseInput = (input: string): number[] => {
   return input.split(',').map(it => parseInt(it));
 };
 
-const solve = (inout: boolean, costFn: () => number){
-
-}
-
 export const solve1 = (input: string): number => {
   const positions = parseInput(input);
   let min = Infinity;
