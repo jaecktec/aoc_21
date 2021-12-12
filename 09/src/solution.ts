@@ -71,18 +71,10 @@ export function trace(x: number, y: number, map: number[][]): number {
   map[x][y] = 9; // ensure we dont go backwards
   let size = 1;
 
-  if (map[x - 1][y] >= currentVal) {
-    size += trace(x - 1, y, map);
-  }
-  if (map[x + 1][y] >= currentVal) {
-    size += trace(x + 1, y, map);
-  }
-  if (map[x][y + 1] >= currentVal) {
-    size += trace(x, y + 1, map);
-  }
-  if (map[x][y - 1] >= currentVal) {
-    size += trace(x, y - 1, map);
-  }
+  size += trace(x - 1, y, map);
+  size += trace(x + 1, y, map);
+  size += trace(x, y + 1, map);
+  size += trace(x, y - 1, map);
 
   return size;
 }
